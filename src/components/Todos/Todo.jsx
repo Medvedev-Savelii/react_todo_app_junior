@@ -1,8 +1,12 @@
 import React from 'react';
+import styles from './Todo.module.css'
 
-function Todo({todo}) {
+function Todo({todo,deleteTodo ,index}) {
+
     return (
-        <h2>{todo}</h2>
+       <div className={styles.todo} onDoubleClick={() => deleteTodo(index)}>
+           <div className={styles.todoText}>{todo}</div>
+       </div>
     );
 }
 
